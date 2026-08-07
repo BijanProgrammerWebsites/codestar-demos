@@ -9,3 +9,4 @@ jobs:
         with:
             host: demos.codestar.ir
             base-href: /
+        secrets: inherit
