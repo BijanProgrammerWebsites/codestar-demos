@@ -1,0 +1,34 @@
+@use "components";
+@use "typography";
+@use "utils";
+
+body {
+    padding-bottom: var(--density--larger);
+
+    > nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--density--large);
+
+            li {
+                display: contents;
+
+                a {
+                    background-color: var(--color-gray-95);
+
+                    flex: 1 0 25rem;
+
+                    padding: var(--density--large);
+
+                    @include typography.apply("subtitle1");
+
+                    &:hover {
+                        background-color: var(--color-gray-90);
+                    }
+                }
+            }
+        }
+    }
+}
