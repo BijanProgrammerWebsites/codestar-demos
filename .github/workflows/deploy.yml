@@ -1,12 +1,14 @@
 name: Deploy
+
 on:
     push:
         branches: [master]
+    workflow_dispatch:
 
 jobs:
     deploy:
         uses: BijanProgrammerWebsites/hub/.github/workflows/deploy-astro.yml@master
         with:
-            host: demos.codestar.ir
+            domain: demos.codestar.ir
             base-href: /
         secrets: inherit
